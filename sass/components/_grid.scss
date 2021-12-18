@@ -14,11 +14,12 @@
 
 .grid__item {
   @media screen and (max-width: 767px) {
-    .grid__item:not(:last-child) {
+    &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
-  @media screen and (min-width: 767px) and (max-width: 1199px) {
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-basis: calc(100% / 2 - 30px);
     margin-right: 30px;
     margin-bottom: 30px;

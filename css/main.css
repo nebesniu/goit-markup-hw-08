@@ -190,12 +190,12 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .grid__item .grid__item:not(:last-child) {
+  .grid__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .grid__item {
     flex-basis: calc(100% / 2 - 30px);
     margin-right: 30px;
@@ -540,6 +540,7 @@ body {
   font-size: 36px;
   line-height: 1.17;
   color: var(--second-title-color);
+  text-align: center;
 }
 
 .work-list {
