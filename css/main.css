@@ -54,10 +54,32 @@ img {
 }
 
 .container {
-  width: 1200px;
+  min-width: 320px;
+}
+
+.container {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  outline: 1px solid tomato;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 body {
@@ -67,8 +89,8 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .filters {
@@ -95,16 +117,13 @@ body {
   border-color: transparent;
   cursor: pointer;
   padding: 6px 22px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filters__buttons:hover,
-.filters__buttons:focus {
+.filters__buttons:hover, .filters__buttons:focus {
   color: var(--first-text-color);
   background-color: var(--accent);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 3px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
@@ -123,8 +142,7 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover, .btn:focus {
   color: var(--first-text-color);
   background-color: #188ce8;
 }
@@ -154,23 +172,46 @@ body {
   color: var(--first-text-color);
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
 }
 
-.grid__item {
-  width: 270px;
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
 }
 
-.grid__item:nth-child(4n) {
-  margin-right: 0;
+@media screen and (max-width: 767px) {
+  .grid__item .grid__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .grid__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid__item {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-right: 30px;
+  }
 }
 
 .social {
   display: flex;
-  justify-content: center;
 }
 
 .social__item {
@@ -191,12 +232,10 @@ body {
   height: 100%;
   color: #afb1b8;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social__link:focus,
-.social__link:hover {
+.social__link:focus, .social__link:hover {
   color: #ffffff;
   background-color: var(--accent);
 }
@@ -220,8 +259,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -240,8 +278,7 @@ body {
   min-height: 581px;
   background-color: #ffffff;
   border-radius: 4px;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14),
-    0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12);
   transform: scale(1) translate(-50%, -50%) rotate(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -288,8 +325,7 @@ body {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form__label:focus-within .modal-form__icon {
@@ -381,15 +417,6 @@ body {
   background-color: #2196f3;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav__list {
-  display: flex;
-}
-
 .nav__item:not(:last-child) {
   margin-right: 50px;
 }
@@ -405,8 +432,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav__link:hover,
-.nav__link:focus {
+.nav__link:hover, .nav__link:focus {
   color: var(--accent);
 }
 
@@ -419,24 +445,7 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.header__box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.contacts {
-  display: flex;
-  align-items: center;
-}
-
-.contacts__item + .contacts__item {
-  margin-left: 30px;
-}
-
 .contacts__our-contacts {
-  display: flex;
-  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14x;
@@ -446,8 +455,7 @@ body {
   padding-bottom: 32px;
 }
 
-.contacts__our-contacts:focus,
-.contacts__our-contacts:hover {
+.contacts__our-contacts:focus, .contacts__our-contacts:hover {
   color: var(--accent);
 }
 
@@ -460,7 +468,6 @@ body {
 }
 
 .hero__title {
-  width: 695px;
   margin: 0 auto;
   margin-bottom: 30px;
   font-weight: 900;
@@ -478,26 +485,10 @@ body {
 
 .hero {
   padding: 200px 0;
-  text-align: center;
-}
-
-.overlay {
-  max-width: 1600px;
-  min-height: 600px;
-  margin: 0 auto;
-  background-color: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/fon.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.section--padding {
-  padding-bottom: 0;
 }
 
 .about {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -516,8 +507,15 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
   text-transform: uppercase;
   color: var(--second-title-color);
+}
+
+@media screen and (min-width: 768px) {
+  .about__after-title {
+    text-align: start;
+  }
 }
 
 .about__text {
@@ -526,12 +524,21 @@ body {
   letter-spacing: 0.03em;
 }
 
+.work {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .work {
+    display: block;
+  }
+}
+
 .work__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
   color: var(--second-title-color);
 }
 
@@ -587,13 +594,7 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
   color: var(--second-title-color);
-}
-
-.team-list {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .team-list__item {
@@ -629,12 +630,7 @@ body {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
   color: var(--second-title-color);
-}
-
-.clients__list {
-  display: flex;
 }
 
 .clients__item {
@@ -659,8 +655,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients__link:hover,
-.clients__link:focus {
+.clients__link:hover, .clients__link:focus {
   color: var(--accent);
   border: 1px solid #2196f3;
   border-radius: 3%;
@@ -676,10 +671,6 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
-}
-
-.footer-container {
-  display: flex;
 }
 
 .address {
@@ -707,13 +698,11 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address__link:hover,
-.address__link:focus {
+.address__link:hover, .address__link:focus {
   color: var(--accent);
 }
 
-a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+26"]
-{
+a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+26"] {
   color: var(--first-text-color);
 }
 
@@ -751,10 +740,6 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   border-radius: 4px;
 }
 
-.label-box {
-  display: flex;
-}
-
 .footer-form__btn {
   display: flex;
   align-items: center;
@@ -785,8 +770,7 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.wrapper__item:focus,
-.wrapper__item:hover {
+.wrapper__item:focus, .wrapper__item:hover {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
