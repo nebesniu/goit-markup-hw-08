@@ -1,0 +1,13 @@
+@mixin centeredflex($disp: flex, $j-c: center, $a-i: center) {
+  display: $disp;
+  justify-content: $j-c;
+  align-items: $a-i;
+}
+@mixin title() {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--second-title-color);
+}

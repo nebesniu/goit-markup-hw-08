@@ -1,0 +1,36 @@
+.contacts {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__item {
+  & + & {
+    margin-left: 30px;
+  }
+}
+
+.contacts__our-contacts {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14x;
+  letter-spacing: 0.02em;
+
+  color: var(--body-color);
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &:focus,
+  &:hover {
+    color: var(--accent);
+  }
+}
+.contacts__icon-smartphone,
+.contacts__icon-envelope {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+}

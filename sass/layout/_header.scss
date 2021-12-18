@@ -1,0 +1,10 @@
+.header {
+  background-color: var(--first-title-color);
+  border-bottom: 1px solid #ececec;
+}
+
+.header__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

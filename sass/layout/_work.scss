@@ -1,0 +1,41 @@
+.work__title {
+  @include title();
+}
+
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work-list__item {
+  width: 370px;
+  margin-right: 30px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.work-list__work-box {
+  position: relative;
+}
+
+.work-list__text {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+
+  width: 370px;
+  height: 70px;
+
+  z-index: 1;
+
+  font-weight: 700;
+  font-size: 14px;
+
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}
