@@ -218,6 +218,12 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .grid--margin {
+    margin-bottom: 30px;
+  }
+}
+
 .social {
   display: flex;
   justify-content: center;
@@ -496,10 +502,6 @@ body {
   padding: 200px 0;
 }
 
-.section--margin {
-  margin-bottom: 30px;
-}
-
 .about {
   width: 100%;
   display: flex;
@@ -544,7 +546,6 @@ body {
 @media screen and (min-width: 1200px) {
   .work {
     display: block;
-    padding-top: 0;
   }
 }
 

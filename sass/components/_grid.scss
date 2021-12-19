@@ -29,3 +29,9 @@
     margin-right: 30px;
   }
 }
+
+.grid--margin {
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 30px;
+  }
+}
