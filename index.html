@@ -61,12 +61,12 @@
       </div>
     </header> -->
     <main class="main">
-      <section class="section overlay">
+      <!-- <section class="section overlay">
         <div class="container hero">
           <h1 class="hero__title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
           <button type="button" class="hero__btn btn" data-modal-open>Заказать услугу</button>
         </div>
-      </section>
+      </section> -->
       <!--  особености -->
       <section class="section">
         <div class="container">
@@ -353,27 +353,28 @@
     </main>
     <footer class="footer">
       <div class="container footer-container">
-        <a class="logo logo-footer link" href="">
-          Web<span class="logo__text--white">Studio</span>
-        </a>
-        <address class="address">
-          <ul class="address__list list">
-            <li class="address__item">
-              <a
-                class="address__link link"
-                href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+26"
-                >г. Киев, пр-т Леси Украинки, 26</a
-              >
-            </li>
-            <li class="address__item">
-              <a class="address__link link" href="mailto:info@example.com">info@example.com</a>
-            </li>
-            <li class="address__item">
-              <a class="address__link link" href="tel:+380991111111">+38 099 111 11 11</a>
-            </li>
-          </ul>
-        </address>
-
+        <div class="wrapper-address">
+          <a class="logo logo-footer link" href="">
+            Web<span class="logo__text--white">Studio</span>
+          </a>
+          <address class="address">
+            <ul class="address__list list">
+              <li class="address__item">
+                <a
+                  class="address__link link"
+                  href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+26"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+              </li>
+              <li class="address__item">
+                <a class="address__link link" href="mailto:info@example.com">info@example.com</a>
+              </li>
+              <li class="address__item">
+                <a class="address__link link" href="tel:+380991111111">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
         <div class="footer-box">
           <p class="footer-box__text">ПРИСОЕДИНЯЙТЕСЬ</p>
           <ul class="list social">
@@ -410,16 +411,17 @@
         <div class="footer-form-box">
           <form class="footer-form">
             <b class="footer-form__title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
-
-            <label class="footer-form__label">
-              <input class="footer-form__input" name="email" type="email" placeholder="E-mail" />
-            </label>
-            <button class="footer-form__btn btn" type="submit">
-              <span class="footer-form__text">Подписаться</span>
-              <svg class="footer-form__icon">
-                <use href="./images/icons.svg#icon-icon-send"></use>
-              </svg>
-            </button>
+            <div class="label-box">
+              <label class="footer-form__label">
+                <input class="footer-form__input" name="email" type="email" placeholder="E-mail" />
+              </label>
+              <button class="footer-form__btn btn" type="submit">
+                <span class="footer-form__text">Подписаться</span>
+                <svg class="footer-form__icon">
+                  <use href="./images/icons.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>

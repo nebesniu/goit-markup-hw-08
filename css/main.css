@@ -752,8 +752,8 @@ body {
 }
 
 .clients__svg {
-  width: 106px;
-  height: 60px;
+  max-width: 106px;
+  max-height: 60px;
   fill: currentColor;
 }
 
@@ -763,8 +763,34 @@ body {
   background-color: #2f303a;
 }
 
-.footer-container {
-  text-align: center;
+@media screen and (max-width: 767px) {
+  .footer-container {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper-address {
+    width: 231px;
+    margin-right: 70px;
+  }
 }
 
 .address {
@@ -799,9 +825,11 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   color: var(--first-text-color);
 }
 
-.footer-box {
-  margin-bottom: 60px;
-  text-align: center;
+@media screen and (max-width: 767px) {
+  .footer-box {
+    margin-bottom: 60px;
+    text-align: center;
+  }
 }
 
 .footer-form__title,
@@ -813,12 +841,27 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   line-height: 1.17;
 }
 
-.footer-form-box {
-  width: 100%;
+@media screen and (max-width: 767px) {
+  .footer-form-box {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form-box {
+    width: 570px;
+    margin-left: 93px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-form__title {
+    display: block;
+  }
 }
 
 .footer-form__input {
-  width: 100%;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.6);
@@ -828,11 +871,46 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   margin-top: 20px;
 }
 
+@media screen and (max-width: 767px) {
+  .footer-form__input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-form__input {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form__input {
+    width: 358px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .label-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 .footer-form__btn {
   display: flex;
   align-items: center;
   padding: 10px 29px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form__btn {
+    margin: 0 0;
+    height: 50px;
+  }
 }
 
 .footer-form__text {
