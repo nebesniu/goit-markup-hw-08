@@ -3,16 +3,28 @@
 }
 
 .clients__list {
-  // display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 
 .clients__item {
-  width: 170px;
-  height: 92px;
-  margin-right: 30px;
-
-  &:last-child {
-    margin-right: 0;
+  @media screen and (min-width: 480px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    height: 92px;
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 6 - 30px);
+    margin-bottom: 0;
   }
 }
 
