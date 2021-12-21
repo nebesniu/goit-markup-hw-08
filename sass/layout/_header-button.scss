@@ -3,11 +3,21 @@
   padding: 0;
   border: none;
   background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .header-button__icon {
   width: 40px;
   height: 40px;
 }
-.header-button .icon-menu-close {
+.header-button .close {
+  display: none;
+}
+.header-button.is-open .close {
+  display: block;
+}
+.header-button.is-open .icon-menu {
   display: none;
 }

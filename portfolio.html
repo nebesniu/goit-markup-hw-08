@@ -22,38 +22,71 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <div class="container header__box">
-        <nav class="nav">
-          <a class="logo link" href=""> Web<span class="logo__text">Studio</span> </a>
-          <ul class="nav__list list">
-            <li class="nav__item"><a href="./index.html" class="nav__link link"> Студия</a></li>
-            <li class="nav__item">
-              <a href="" class="nav__link link nav__link--current"> Портфолио</a>
+        <a class="logo link" href=""> Web<span class="logo__text">Studio</span> </a>
+        <button type="button" class="header-button is-open" aria-expanded="false" data-menu-button>
+          <svg class="header-button__icon" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="images/icons.svg#icon-menu"></use>
+            <use class="close" href="images/icons.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="menu-header is-open" data-menu>
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="nav__link link nav__link--current" href=""> Студия</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="./portfolio.html"> Портфолио</a>
+              </li>
+              <li class="nav__item"><a class="nav__link link" href=""> Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="contacts list">
+            <li class="contacts__item">
+              <a
+                class="contacts__our-contacts tel link"
+                href="tel:+380961111111"
+                aria-label="смартфон"
+              >
+                <svg class="contacts__icon-smartphone">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                <span class="numbers">+38 096 111 11 11</span></a
+              >
             </li>
-            <li class="nav__item"><a href="" class="nav__link link"> Контакты</a></li>
+            <li class="contacts__item">
+              <a
+                class="contacts__our-contacts link"
+                href="mailto:info@devstudio.com"
+                aria-label="конверт"
+              >
+                <svg class="contacts__icon-envelope">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                <span class="mail">info@devstudio.com</span>
+              </a>
+            </li>
           </ul>
-        </nav>
-        <ul class="contacts list">
-          <li class="contacts__item">
-            <a class="contacts__our-contacts link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon-envelope">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__our-contacts link" href="tel:+380961111111">
-              <svg class="contacts__icon-smartphone">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="list social-networks">
+            <li>
+              <p>Instagram</p>
+            </li>
+            <li>
+              <p>Twitter</p>
+            </li>
+            <li>
+              <p>Facebook</p>
+            </li>
+            <li>
+              <p>LinkedIn</p>
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </header> -->
     <main class="main-porfolio">
       <section class="projects section">
         <div class="container">
@@ -227,7 +260,7 @@
     </main>
     <footer class="footer">
       <div class="container footer-container">
-        <div>
+        <div class="wrapper-address">
           <a class="logo logo-footer link" href="">
             Web<span class="logo__text--white">Studio</span>
           </a>
@@ -249,7 +282,6 @@
             </ul>
           </address>
         </div>
-
         <div class="footer-box">
           <p class="footer-box__text">ПРИСОЕДИНЯЙТЕСЬ</p>
           <ul class="list social">
@@ -287,7 +319,7 @@
           <form class="footer-form">
             <b class="footer-form__title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
             <div class="label-box">
-              <label>
+              <label class="footer-form__label">
                 <input class="footer-form__input" name="email" type="email" placeholder="E-mail" />
               </label>
               <button class="footer-form__btn btn" type="submit">

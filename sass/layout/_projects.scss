@@ -1,11 +1,11 @@
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
+// .wrapper {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
 
 .wrapper__item {
-  width: 370px;
-  height: 404px;
+  width: 100%;
+
   margin-right: 30px;
   margin-bottom: 30px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);

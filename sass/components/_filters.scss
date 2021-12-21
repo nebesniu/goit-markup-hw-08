@@ -1,11 +1,28 @@
 .filters {
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
+  // margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 .filters__item {
-  & + & {
-    margin-left: 8px;
+  @media screen and (max-width: 767px) {
+    margin-right: 8px;
+  }
+  @media screen and (min-width: 768px) {
+    & + & {
+      margin-left: 8px;
+    }
   }
 }
 .filters__buttons {
