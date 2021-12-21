@@ -156,15 +156,15 @@ body {
 }
 
 .logo {
+  display: block;
   font-family: Raleway;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: var(--accent);
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin-right: 93px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .logo-footer {
@@ -456,8 +456,34 @@ body {
 }
 
 .header {
+  position: relative;
   background-color: var(--first-title-color);
-  border-bottom: 1px solid #ececec;
+}
+
+.header__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-header {
+  display: none;
+}
+
+.header-button {
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.header-button__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.header-button .icon-menu-close {
+  display: none;
 }
 
 .contacts__our-contacts {
@@ -513,18 +539,12 @@ body {
 }
 
 .hero {
-  padding: 200px 0;
   text-align: center;
+  background-color: #a03131;
 }
 
-.overlay {
-  min-height: 600px;
-  margin: 0 auto;
-  background-color: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/fon.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.section-hero {
+  padding: 0;
 }
 
 .about {

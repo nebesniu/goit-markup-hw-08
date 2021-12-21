@@ -22,46 +22,55 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__box">
-        <nav class="nav">
-          <a class="logo link" href=""> Web<span class="logo__text">Studio</span> </a>
-          <ul class="nav__list list">
-            <li class="nav__item">
-              <a class="nav__link link nav__link--current" href=""> Студия</a>
+        <a class="logo link" href=""> Web<span class="logo__text">Studio</span> </a>
+        <button type="button" class="header-button">
+          <svg class="header-button__icon" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="images/icons.svg#icon-menu"></use>
+            <use class="icon-menu-close" href="images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+
+        <div class="menu-header">
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="nav__link link nav__link--current" href=""> Студия</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="./portfolio.html"> Портфолио</a>
+              </li>
+              <li class="nav__item"><a class="nav__link link" href=""> Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="contacts list">
+            <li class="contacts__item">
+              <a
+                class="contacts__our-contacts link"
+                href="mailto:info@devstudio.com"
+                aria-label="конверт"
+              >
+                <svg class="contacts__icon-envelope">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="nav__item">
-              <a class="nav__link link" href="./portfolio.html"> Портфолио</a>
+            <li class="contacts__item">
+              <a class="contacts__our-contacts link" href="tel:+380961111111" aria-label="смартфон">
+                <svg class="contacts__icon-smartphone">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
-            <li class="nav__item"><a class="nav__link link" href=""> Контакты</a></li>
           </ul>
-        </nav>
-        <ul class="contacts list">
-          <li class="contacts__item">
-            <a
-              class="contacts__our-contacts link"
-              href="mailto:info@devstudio.com"
-              aria-label="конверт"
-            >
-              <svg class="contacts__icon-envelope">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__our-contacts link" href="tel:+380961111111" aria-label="смартфон">
-              <svg class="contacts__icon-smartphone">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
-    </header> -->
+    </header>
     <main class="main">
-      <section class="section overlay">
+      <section class="section overlay section-hero">
         <div class="container hero">
           <h1 class="hero__title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
           <button type="button" class="hero__btn btn" data-modal-open>Заказать услугу</button>
