@@ -13,7 +13,7 @@
 .menu-header {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 0;
   width: 100%;
   height: 796px;
@@ -39,4 +39,24 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
+}
+
+.social-networks__item {
+  position: relative;
+  margin-right: 20px;
+  &:last-child .social-networks__text::after {
+    background-color: transparent;
+  }
+}
+
+.social-networks__text::after {
+  display: inline-block;
+  position: absolute;
+  right: -10px;
+  content: '';
+
+  width: 1px;
+  height: 22px;
+
+  background-color: rgba(33, 33, 33, 0.2);
 }
