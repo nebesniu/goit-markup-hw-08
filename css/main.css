@@ -321,8 +321,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
-  min-width: 528px;
-  min-height: 581px;
+  max-width: 528px;
+  max-height: 581px;
   background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12);
@@ -518,15 +518,7 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .header__box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 320px) {
   .header__box {
     display: flex;
     align-items: center;
@@ -536,7 +528,7 @@ body {
 
 .mob-menu-button,
 .header-button {
-  display: block;
+  display: inline-flex;
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -565,6 +557,12 @@ body {
   z-index: 5;
   padding: 48px 0;
   padding-left: 40px;
+}
+
+.mob-menu.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .mob-menu .container {
@@ -768,7 +766,24 @@ body {
 
 .hero {
   text-align: center;
-  background-color: #a03131;
+}
+
+@media screen and (max-width: 1199px) {
+  .hero {
+    background-color: #a03131;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay {
+    max-width: 1600px;
+    max-height: 600px;
+    background-color: #2f303a;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/fon.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .section-hero {
