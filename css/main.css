@@ -58,6 +58,7 @@ img {
 }
 
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -189,6 +190,13 @@ body {
   color: var(--accent);
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+    font-size: 26px;
+  }
 }
 
 .logo-footer {
@@ -456,31 +464,48 @@ body {
   background-color: #2196f3;
 }
 
-.nav__list {
-  margin-bottom: 302px;
+@media screen and (max-width: 767px) {
+  .nav {
+    display: none;
+  }
 }
 
-.nav__item {
-  margin-bottom: 32px;
+@media screen and (min-width: 1200px) {
+  .nav {
+    margin-right: 305px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__list {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .nav__link {
-  color: var(--second-title-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (max-width: 767px) {
-  .nav__link {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.18;
-    letter-spacing: 0.02em;
-    margin-bottom: 32px;
-  }
 }
 
 .nav__link:hover, .nav__link:focus {
   color: var(--accent);
+}
+
+@media screen and (min-width: 768px) {
+  .nav__link {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    color: #212121;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .nav__link--current {
@@ -490,28 +515,119 @@ body {
 .header {
   position: relative;
   background-color: var(--first-title-color);
+  border-bottom: 1px solid #ececec;
 }
 
-.header__box {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.mob-menu-button,
+.header-button {
+  display: block;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .mob-menu-button,
+  .header-button {
+    display: none;
+  }
+}
+
+.mob-menu-button__icon,
+.header-button__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mob-menu {
+  position: fixed;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  padding: 48px 0;
+  padding-left: 40px;
+}
+
+.mob-menu .container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
+}
+
+.mob-menu-box {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
-.menu-header {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 796px;
-  padding: 48px 40px;
-  background-color: #ffffff;
-  outline: 1px solid tomato;
+.mob-menu-box {
+  height: 100%;
 }
 
-.menu-header.is-open {
-  display: block;
+.mob-menu-button {
+  position: absolute;
+  top: 21px;
+  right: 33px;
+}
+
+.mob-menu__item {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__link--current {
+  color: var(--accent);
+}
+
+.mob-contacts {
+  margin-bottom: 64px;
+}
+
+.mob-contacts__item {
+  font-size: 24px;
+  line-height: 1.17;
+}
+
+.mob-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-contacts__item--blue {
+  color: var(--accent);
+  line-height: 1.17;
+  font-size: 32px;
 }
 
 .social-networks {
@@ -523,14 +639,11 @@ body {
   letter-spacing: 0.02;
 }
 
-@media screen and (min-width: 768px) {
-  .social-networks {
-    display: none;
-  }
-}
-
 .social-networks__item {
   position: relative;
+}
+
+.social-networks__item:not(:last-child) {
   margin-right: 20px;
 }
 
@@ -548,48 +661,41 @@ body {
   background-color: rgba(33, 33, 33, 0.2);
 }
 
-.header-button {
-  display: inline-flex;
-  position: absolute;
-  right: 10px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  z-index: 1;
-}
-
-@media screen and (min-width: 768px) {
-  .header-button {
+@media screen and (max-width: 767px) {
+  .contacts {
     display: none;
   }
 }
 
-.header-button__icon {
-  width: 40px;
-  height: 40px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
 }
 
-.header-button .close {
-  display: none;
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+  }
 }
 
-.header-button.is-open .close {
-  display: block;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__item:not(:first-child) {
+    margin-bottom: 10px;
+  }
 }
 
-.header-button.is-open .icon-menu {
-  display: none;
-}
-
-.contacts {
-  margin-bottom: 64px;
-}
-
-.contacts__item {
-  margin-bottom: 32px;
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:first-child) {
+    margin-left: 30px;
+  }
 }
 
 .contacts__our-contacts {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -600,28 +706,34 @@ body {
   color: var(--accent);
 }
 
-@media screen and (max-width: 767px) {
-  .contacts__our-contacts .numbers {
-    color: var(--accent);
-    line-height: 1.17;
-    font-size: 32px;
+@media screen and (min-width: 768px) {
+  .contacts__our-contacts {
+    font-size: 12px;
+    line-height: calc(14.06 / 12);
   }
 }
 
-@media screen and (max-width: 767px) {
-  .contacts__our-contacts .mail {
-    font-size: 24px;
+@media screen and (min-width: 1200px) {
+  .contacts__our-contacts {
+    padding-top: 32px;
+    padding-bottom: 32px;
     line-height: 1.17;
   }
 }
 
 .contacts__icon-smartphone,
 .contacts__icon-envelope {
-  display: none;
   width: 16px;
   height: 16px;
-  margin-right: 10px;
+  margin-right: 8px;
   fill: currentColor;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts__icon-smartphone,
+  .contacts__icon-envelope {
+    display: none;
+  }
 }
 
 .hero__title {

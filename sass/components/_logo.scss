@@ -9,6 +9,10 @@
 
   padding-top: 16px;
   padding-bottom: 16px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+    font-size: 26px;
+  }
 }
 
 .logo-footer {
