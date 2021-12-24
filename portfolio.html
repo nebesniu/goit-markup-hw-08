@@ -25,7 +25,7 @@
     <header class="header">
       <div class="container header__box">
         <a class="logo link" href=""> Web<span class="logo__text">Studio</span> </a>
-        <button type="button" class="header-button">
+        <button type="button" class="header-button" data-menu-open>
           <svg class="header-button__icon" aria-label="Переключатель мобильного меню">
             <use class="icon-menu" href="images/icons.svg#icon-menu"></use>
           </svg>
@@ -68,50 +68,50 @@
             </a>
           </li>
         </ul>
-        <div class="mob-menu">
-          <div class="container">
-            <button class="mob-menu-button">
-              <svg class="mob-menu-button__icon">
-                <use href="images/icons.svg#close"></use>
-              </svg>
-            </button>
-            <div class="mob-menu-box">
-              <ul class="mob-menu__list list">
-                <li class="mob-menu__item">
-                  <a class="mob-menu__link link mob-menu__link--current" href=""> Студия</a>
-                </li>
-                <li class="mob-menu__item">
-                  <a class="mob-menu__link link" href="./portfolio.html"> Портфолио</a>
-                </li>
-                <li class="mob-menu__item"><a class="mob-menu__link link" href=""> Контакты</a></li>
-              </ul>
-              <ul class="mob-contacts list">
-                <li class="mob-contacts__item mob-contacts__item--blue">
-                  <a class="mob-contacts__link link" href="tel:+380961111111"> +38 096 111 11 11</a>
-                </li>
-                <li class="mob-contacts__item">
-                  <a class="mob-contacts__link link" href="mailto:info@devstudio.com">
-                    info@devstudio.com
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <ul class="list social-networks">
-              <li class="social-networks__item">
-                <p class="social-networks__text">Instagram</p>
+        <div class="mob-menu is-hidden" data-menu>
+          <button class="mob-menu-button" data-menu-close>
+            <svg class="mob-menu-button__icon">
+              <use href="images/icons.svg#close"></use>
+            </svg>
+          </button>
+          <div class="mob-menu-box">
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="./index.html"> Студия</a>
               </li>
-              <li class="social-networks__item">
-                <p class="social-networks__text">Twitter</p>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link mob-menu__link--current link" href="./portfolio.html">
+                  Портфолио</a
+                >
               </li>
-              <li class="social-networks__item">
-                <p class="social-networks__text">Facebook</p>
+              <li class="mob-menu__item"><a class="mob-menu__link link" href=""> Контакты</a></li>
+            </ul>
+            <ul class="mob-contacts list">
+              <li class="mob-contacts__item mob-contacts__item--blue">
+                <a class="mob-contacts__link link" href="tel:+380961111111"> +38 096 111 11 11</a>
               </li>
-              <li class="social-networks__item">
-                <p class="social-networks__text">LinkedIn</p>
+              <li class="mob-contacts__item">
+                <a class="mob-contacts__link link" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
               </li>
             </ul>
           </div>
+
+          <ul class="list social-networks">
+            <li class="social-networks__item">
+              <p class="social-networks__text">Instagram</p>
+            </li>
+            <li class="social-networks__item">
+              <p class="social-networks__text">Twitter</p>
+            </li>
+            <li class="social-networks__item">
+              <p class="social-networks__text">Facebook</p>
+            </li>
+            <li class="social-networks__item">
+              <p class="social-networks__text">LinkedIn</p>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -141,7 +141,7 @@
             <li class="wrapper__item">
               <a class="link wrapper__link" href="">
                 <div class="gallery">
-                  <img class="gallery__icon" src="./images/pic1.jpg" alt="ноутбук" />
+                  <img class="gallery__icon" src="./images/pic-mob.jpg" alt="ноутбук" />
                   <p class="gallery__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
@@ -361,5 +361,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

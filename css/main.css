@@ -58,7 +58,6 @@ img {
 }
 
 .container {
-  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -334,6 +333,13 @@ body {
   transform: scale(0.5) rotate(180deg) translate(200px, 200px);
 }
 
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
 .modal__btn {
   display: flex;
   justify-content: center;
@@ -548,6 +554,7 @@ body {
 }
 
 .mob-menu {
+  min-width: 320px;
   position: fixed;
   background-color: #ffffff;
   top: 0;
@@ -778,16 +785,13 @@ body {
   .overlay {
     max-width: 1600px;
     max-height: 600px;
+    padding: 200px 0;
     background-color: #2f303a;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/fon.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
-}
-
-.section-hero {
-  padding: 0;
 }
 
 .about {
