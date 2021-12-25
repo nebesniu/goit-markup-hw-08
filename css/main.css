@@ -340,6 +340,13 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
+
 .modal__btn {
   display: flex;
   justify-content: center;
@@ -432,11 +439,17 @@ body {
 .label-checkbox-text {
   display: flex;
   align-items: center;
-  margin: 20px 11px 30px;
-  text-align: end;
-  font-size: 14px;
+  margin-bottom: 30px;
+  font-size: 12px;
   line-height: 1.71;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .label-checkbox-text {
+    margin: 20px 11px 30px;
+    font-size: 14px;
+  }
 }
 
 .modal-span {
@@ -787,7 +800,7 @@ body {
     max-height: 600px;
     padding: 200px 0;
     background-color: #2f303a;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/fon.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/fon.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1218,8 +1231,16 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.wrapper__item:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: 1199px) {
+  .wrapper__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper__item {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1242,7 +1263,6 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
 .gallery {
   position: relative;
   width: 100%;
-  height: 294px;
   overflow: hidden;
 }
 
@@ -1290,5 +1310,11 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   background-color: #ffffff;
   border: 1px solid #eeeeee;
   padding: 20px 24px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .gallery__box--height {
+    height: 148px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

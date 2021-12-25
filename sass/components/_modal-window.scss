@@ -44,6 +44,10 @@
     width: 450px;
     height: 609px;
   }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__btn {
@@ -134,12 +138,16 @@
 }
 
 .label-checkbox-text {
+  @media screen and (min-width: 1200px) {
+    margin: 20px 11px 30px;
+
+    font-size: 14px;
+  }
   display: flex;
   align-items: center;
-  margin: 20px 11px 30px;
-  text-align: end;
+  margin-bottom: 30px;
 
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   cursor: pointer;
 }
