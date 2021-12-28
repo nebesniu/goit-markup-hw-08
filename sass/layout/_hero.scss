@@ -6,7 +6,6 @@
   font-size: 26px;
   line-height: 1.61;
   letter-spacing: 0.06em;
-  text-align: center;
 
   text-transform: uppercase;
   color: var(--first-title-color);
@@ -24,25 +23,125 @@
 .hero__btn {
   padding: 10px 32px;
 }
-
-.hero {
+.overlay {
   text-align: center;
-  @media screen and (max-width: 1199px) {
-    background-color: rgb(160, 49, 49);
-  }
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.overlay {
-  @media screen and (min-width: 1200px) {
-    max-width: 1600px;
-    max-height: 600px;
-    padding: 200px 0;
+//
+//   }
+//
+//   @media screen and (min-device-pixel-ratio: 2),
+//     screen and (min-resolution: 192dpi),
+//     screen and (min-resolution: 2dppx) {
+//     & {
+//       background-image: url(../images/desktop/fon-img-960-min.jpg);
+//     }
+//   }
+// }
+// .overlay {
+//   @media screen and (min-width: 768px) {
+//     width: 768px;
+//     height: 400px;
+//     background-image: url(../images/desktop/fon-img-768-min.jpg);
+//     background-size: 768px 400px;
+//   }
+//   @media screen and (min-device-pixel-ratio: 2),
+//     screen and (min-resolution: 192dpi),
+//     screen and (min-resolution: 2dppx) {
+//     & {
+//       background-image: url(../images/desktop/fon-img-1536-min.jpg);
+//     }
+//   }
+// }
 
-    background-color: #2f303a;
+// .overlay {
+//   @media screen and (min-width: 1200px) {
+//     max-width: 1600px;
+//     min-height: 600px;
+
+//     background-image: url(../images/desktop/img-3200-min.jpg);
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//   }
+// }
+// .section-hero {
+//   padding: 0;
+//   @media screen and (min-width: 1200px) {
+//     padding-top: 200px;
+//   }
+// }
+
+.overlay {
+  @media screen and (min-width: 320px) {
+    max-height: 400px;
+
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('../images/desktop/fon.jpg');
-    background-repeat: no-repeat;
+      url(../images/desktop/fon-img-480-min.jpg);
     background-position: center;
     background-size: cover;
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../images/desktop/fon-img-960-min.jpg);
+      }
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    padding-top: 118px;
+    width: 480px;
+    height: 400px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/desktop/fon-img-480-min.jpg);
+    background-size: 480px 400px;
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../images/desktop/fon-img-960-min.jpg);
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    height: 400px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/desktop/fon-img-768-min.jpg);
+    background-size: 768px 400px;
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../images/desktop/fon-img-1536-min.jpg);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    min-width: 1200px;
+    max-width: 1600px;
+    min-height: 600px;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/desktop/fon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    & {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/desktop/Img-3200-min.jpg);
+    }
   }
 }

@@ -61,7 +61,6 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid tomato;
 }
 
 @media screen and (min-width: 480px) {
@@ -91,7 +90,6 @@ body {
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-  outline: 1px solid teal;
 }
 
 @media screen and (min-width: 1200px) {
@@ -491,7 +489,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .nav {
-    margin-right: 305px;
+    margin-right: 295px;
   }
 }
 
@@ -736,6 +734,7 @@ body {
     padding-top: 32px;
     padding-bottom: 32px;
     line-height: 1.17;
+    font-size: 14px;
   }
 }
 
@@ -761,7 +760,6 @@ body {
   font-size: 26px;
   line-height: 1.61;
   letter-spacing: 0.06em;
-  text-align: center;
   text-transform: uppercase;
   color: var(--first-title-color);
 }
@@ -784,26 +782,71 @@ body {
   padding: 10px 32px;
 }
 
-.hero {
+.overlay {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media screen and (max-width: 1199px) {
-  .hero {
-    background-color: #a03131;
+@media screen and (min-width: 320px) {
+  .overlay {
+    max-height: 400px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/fon-img-480-min.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 320px) and (min-device-pixel-ratio: 2), screen and (min-width: 320px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 320px) and (min-resolution: 192dpi), screen and (min-width: 320px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/fon-img-960-min.jpg);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .overlay {
+    padding-top: 118px;
+    width: 480px;
+    height: 400px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/fon-img-480-min.jpg);
+    background-size: 480px 400px;
+  }
+}
+
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/fon-img-960-min.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    width: 768px;
+    height: 400px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/fon-img-768-min.jpg);
+    background-size: 768px 400px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/fon-img-1536-min.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .overlay {
+    padding-top: 200px;
+    min-width: 1200px;
     max-width: 1600px;
-    max-height: 600px;
-    padding: 200px 0;
-    background-color: #2f303a;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/fon.jpg");
+    min-height: 600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/fon.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+  }
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/Img-3200-min.jpg);
   }
 }
 
@@ -993,7 +1036,6 @@ body {
 }
 
 .clients__list {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   margin-right: -30px;
