@@ -249,7 +249,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .grid--margin {
-    margin-bottom: 30px;
+    margin-bottom: 94px;
   }
 }
 
@@ -959,6 +959,13 @@ body {
   color: var(--second-title-color);
 }
 
+@media screen and (max-width: 1199px) {
+  .team__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-list {
     display: flex;
@@ -1030,6 +1037,13 @@ body {
   line-height: 1.17;
   text-align: center;
   color: var(--second-title-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .clients__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
 }
 
 .clients__list {
@@ -1133,9 +1147,11 @@ body {
   }
 }
 
-.address {
-  margin-top: 20px;
-  margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .address {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
 }
 
 .address__item {
