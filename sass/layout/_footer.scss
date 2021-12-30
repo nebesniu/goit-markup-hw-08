@@ -22,7 +22,7 @@
 }
 
 .wrapper-address {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     text-align: center;
   }
 
@@ -75,7 +75,7 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
     margin-bottom: 60px;
     text-align: center;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     text-align: center;
   }
 }
