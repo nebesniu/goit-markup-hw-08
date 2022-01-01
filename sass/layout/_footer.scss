@@ -89,17 +89,12 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
 }
 
 .footer-form-box {
-  @media screen and (max-width: 767px) {
-    width: 100%;
-    text-align: center;
-  }
-  @media screen and (min-width: 768px) {
-    text-align: center;
-  }
+  text-align: center;
 
   @media screen and (min-width: 1200px) {
-    width: 570px;
     margin-left: 93px;
+    text-align: left;
+    flex-grow: 1;
   }
 }
 
@@ -110,9 +105,7 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
 }
 
 .footer-form__input {
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
+  width: 100%;
 
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -129,8 +122,12 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
     margin-right: auto;
   }
   @media screen and (min-width: 1200px) {
-    width: 358px;
+    margin: 0;
   }
+}
+.footer-form__label {
+  flex-grow: 1;
+  margin-right: 12px;
 }
 
 .label-box {
