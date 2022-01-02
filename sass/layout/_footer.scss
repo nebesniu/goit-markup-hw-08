@@ -126,8 +126,10 @@ a[href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+
   }
 }
 .footer-form__label {
-  flex-grow: 1;
-  margin-right: 12px;
+  @media screen and (min-width: 1200px) {
+    flex-grow: 1;
+    margin-right: 12px;
+  }
 }
 
 .label-box {
